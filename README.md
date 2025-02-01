@@ -9,3 +9,6 @@
 
 ![image](https://github.com/user-attachments/assets/a037c29a-83c4-42f0-88af-62bbbb916a9b)
 
+После всех этих манипуляций, повторно прописываем команду `sudo yam istall wget`, и для того, чтобы убедиться, что она скачена прописываем команду `wget --version`.
+
+![image](https://github.com/user-attachments/assets/7569a52a-cd2b-4673-8fbe-5a6c7cf93c4b)
