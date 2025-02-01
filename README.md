@@ -21,5 +21,5 @@
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/1d13b881-0e6c-4975-8af8-a9871c85c74b" alt="" width="500">
-   <p>Рисунок 5 - wget</p>
+   <p>Рисунок 4 - wget</p>
 </div>
