@@ -1,4 +1,4 @@
-# DavidovLaba
+# Laba
 ## Задание 1 ##
 Была прописана команда `sudo yam istall wget`, после чего была получена ошибка `is not a sudoers life`(рис. 1).
 
