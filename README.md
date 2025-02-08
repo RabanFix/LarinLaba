@@ -22,3 +22,12 @@
    <img src="https://github.com/user-attachments/assets/1d13b881-0e6c-4975-8af8-a9871c85c74b" alt="" width="500">
    <p>Рисунок 3 - wget</p>
 </div>
+
+## Задание 2 ##
+Прописываем команду `sudo yam install curl`, дабы убедиться, что библиотека curl скачена на ВМ (рис. 4).
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/045fa605-3f01-44b9-9f08-26e8e95335bc" alt="" width="500">
+   <p>Рисунок 3 - curl</p>
+</div>
+
