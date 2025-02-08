@@ -24,10 +24,17 @@
 </div>
 
 ## Задание 2 ##
-Прописываем команду `sudo yam install curl`, дабы убедиться, что библиотека curl скачена на ВМ (рис. 4).
+Прописываем команду `sudo yam install curl`, дабы убедиться, что библиотека curl скачена на виртуальную машину (рис. 4).
 
 <div align="center">
-   <img src="https://github.com/user-attachments/assets/045fa605-3f01-44b9-9f08-26e8e95335bc" alt="" width="500">
-   <p>Рисунок 3 - curl</p>
+   <img src="https://github.com/user-attachments/assets/045fa605-3f01-44b9-9f08-26e8e95335bc" alt="" width="1000">
+   <p>Рисунок 4 - curl</p>
+</div>
+
+Дальше по заданию прописываем команду `sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo`. Данная команда устанавливает docker по следующему пути: /etc/yum.repos.d/ в виртуальную машину (рис. 5).
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/5ea3ce1b-2b08-4406-ae85-3ff54795f2cf" alt="" width="1000">
+   <p>Рисунок 5 - curl</p>
 </div>
 
