@@ -31,10 +31,17 @@
    <p>Рисунок 4 - curl</p>
 </div>
 
-Дальше по заданию прописываем команду `sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo`. Данная команда устанавливает docker по следующему пути: /etc/yum.repos.d/ в виртуальную машину (рис. 5).
+Дальше по заданию прописываем команду `sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo`. Данная команда устанавливает репозиторий docker по следующему пути: /etc/yum.repos.d/ в виртуальную машину (рис. 5).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/5ea3ce1b-2b08-4406-ae85-3ff54795f2cf" alt="" width="1000">
-   <p>Рисунок 5 - curl</p>
+   <p>Рисунок 5 - Репозиторий docker</p>
+</div>
+
+Следующий шагом нужно будет установить сам docker командой `sudo yum install docker-ce docker-ce-cli containerd.io` (рис. 6).
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/6612cbe1-3369-4a6b-8f0c-e331e1c305d1" alt="" width="1000">
+   <p>Рисунок 6 - docker</p>
 </div>
 
