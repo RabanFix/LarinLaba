@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/c11f0205-a5d4-46fb-bd9c-6487058be89b)# Laba
+# Лабораторная работа
 ## Задание 1 ##
 Была прописана команда `sudo yam istall wget`, после чего была получена ошибка `is not a sudoers file`.
 
