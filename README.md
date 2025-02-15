@@ -150,6 +150,6 @@ sudo systemctl enable docker --now
 `sudo docker compose up -d`
 
 <div align="center">
-   <img src="" alt="" width="1000">
+   <img src="https://github.com/user-attachments/assets/a6d9dd9c-eab3-4032-9fc9-c5af6e52dffc" alt="" width="1000">
    <p>Рисунок 21 - Команда для версии Docker Compose</p>
 </div>
