@@ -56,37 +56,86 @@ sudo systemctl enable docker --now
 </div>
 
 ## Задание 3 ##
-`COMVER=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)`
+Команда `COMVER=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)` получает последнюю версию Docker Compose, для этого использует API GitHub для получения информации о последнем релизе и вытаскивает номер версии из JSON ответа (рис. 8).
 
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/920311ec-d9cc-4f5e-a9f2-a8c99b471e0c" alt="" width="1000">
+   <p>Рисунок 8 - Команда для версии Docker Compose</p>
+</div>
 
-`sudo curl -L "https://github.com/docker/compose/releases/download/$COMVER/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose`
+Команда `sudo curl -L "https://github.com/docker/compose/releases/download/$COMVER/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose` скачивает Docker Compose соответствующий системе, $(uname -s) - операционная система, $(uname -m) - архитектура процессора и сохраняет в /usr/bin/docker-compose (рис. 9).
 
+<div align="center">
+   <img src="" alt="" width="1000">
+   <p>Рисунок 8 - Команда для версии Docker Compose</p>
+</div>
 
 `sudo chmod +x /usr/bin/docker-compose`
 
+<div align="center">
+   <img src="" alt="" width="1000">
+   <p>Рисунок 8 - Команда для версии Docker Compose</p>
+</div>
 
 `docker-compose --version`
 
+<div align="center">
+   <img src="" alt="" width="1000">
+   <p>Рисунок 8 - Команда для версии Docker Compose</p>
+</div>
 
 `git clone https://github.com/skl256/grafana_stack_for_docker.git`
 
+<div align="center">
+   <img src="" alt="" width="1000">
+   <p>Рисунок 8 - Команда для версии Docker Compose</p>
+</div>
 
 `cd grafana_stack_for_docker`
 
+<div align="center">
+   <img src="" alt="" width="1000">
+   <p>Рисунок 8 - Команда для версии Docker Compose</p>
+</div>
 
 `sudo mkdir -p /mnt/common_volume/swarm/grafana/config`
 
+<div align="center">
+   <img src="" alt="" width="1000">
+   <p>Рисунок 8 - Команда для версии Docker Compose</p>
+</div>
 
 `sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}`
 
+<div align="center">
+   <img src="" alt="" width="1000">
+   <p>Рисунок 8 - Команда для версии Docker Compose</p>
+</div>
 
 `touch /mnt/common_volume/grafana/grafana-config/grafana.ini`
 
+<div align="center">
+   <img src="" alt="" width="1000">
+   <p>Рисунок 8 - Команда для версии Docker Compose</p>
+</div>
 
 `cp config/* /mnt/common_volume/swarm/grafana/config/`
 
+<div align="center">
+   <img src="" alt="" width="1000">
+   <p>Рисунок 8 - Команда для версии Docker Compose</p>
+</div>
 
 `mv grafana.yaml docker-compose.yaml`
 
+<div align="center">
+   <img src="" alt="" width="1000">
+   <p>Рисунок 8 - Команда для версии Docker Compose</p>
+</div>
 
 `sudo docker compose up -d`
+
+<div align="center">
+   <img src="" alt="" width="1000">
+   <p>Рисунок 8 - Команда для версии Docker Compose</p>
+</div>
