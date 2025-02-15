@@ -45,7 +45,10 @@
    <p>Рисунок 6 - docker</p>
 </div>
 
-Следующая команда `sudo systemctl enable docker --now` даём разрешение на авто-запуск docker (рис. 7).
+Следующая команда даёn разрешение на авто-запуск docker (рис. 7).
+```bash
+sudo systemctl enable docker --now
+```
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/dfaae9a9-3b28-49ad-839c-0b80bcaa99bc" alt="" width="1000">
