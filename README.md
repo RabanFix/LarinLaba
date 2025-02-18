@@ -1,6 +1,6 @@
 # Лабораторная работа
 ## Задание 1 ##
-Была прописана команда `sudo yam istall wget`, после чего была получена ошибка `is not a sudoers file`.
+Была прописана команда `sudo yum istall wget`, после чего была получена ошибка `is not in the sudoers file`.
 
 Для этого, сначала заходим под супер пользователя командой `su` (рис. 1).
 
@@ -133,21 +133,40 @@ sudo systemctl enable docker --now
    <p>Рисунок 18 - Команда для версии Docker Compose</p>
 </div>
 
-`cp config/* /mnt/common_volume/swarm/grafana/config/`
+```bash
+cp config/* /mnt/common_volume/swarm/grafana/config/
+```
+
+- Команда копирует все файлы и поддиректории из директории config/ в указанную целевую директорию `/mnt/common_volume/swarm/grafana/config/`.
+- Если целевая директория уже содержит файлы с такими же именами, они будут перезаписаны без предупреждения (в стандартном режиме).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/3f366f71-13de-4622-bb9d-c5f476692988" alt="" width="1000">
    <p>Рисунок 19 - Команда для версии Docker Compose</p>
 </div>
 
-`mv grafana.yaml docker-compose.yaml`
+```bash
+mv grafana.yaml docker-compose.yaml
+```
+Команда переименовывает файл grafana.yaml в docker-compose.yaml.
+После выполнения этой команды:
+- Файл с именем `grafana.yaml` больше не существует.
+- На его месте появится файл с именем docker-compose.yaml, содержащий ту же информацию, что и исходный файл.
+
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/36802099-d178-4d9e-a694-ac65bf31e113" alt="" width="1000">
    <p>Рисунок 20 - Команда для версии Docker Compose</p>
 </div>
 
-`sudo docker compose up -d`
+```bash
+sudo docker compose up -d
+```
+
+Команда выполняет следующие действия:
+- Запускает все службы, описанные в файле docker-compose.yml, находящемся в текущей директории.
+- Делает это в фоновом режиме (-d), чтобы не блокировать терминал.
+- Если необходимы права суперпользователя, используется sudo.
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/a6d9dd9c-eab3-4032-9fc9-c5af6e52dffc" alt="" width="1000">
