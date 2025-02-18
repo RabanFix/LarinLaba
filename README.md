@@ -16,7 +16,7 @@
    <p>Рисуок 2 - Конфигурационный файл sudoers </p>
 </div>
 
-После всех этих манипуляций повторно прописываем команду `sudo yam istall wget` и для того, чтобы убедиться, что она скачена, прописываем команду `wget --version` (рис. 3).
+После всех этих манипуляций повторно прописываем команду `sudo yum istall wget` и для того, чтобы убедиться, что она скачена, прописываем команду `wget --version` (рис. 3).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/1d13b881-0e6c-4975-8af8-a9871c85c74b" alt="" width="500">
@@ -24,7 +24,7 @@
 </div>
 
 ## Задание 2 ##
-Прописываем команду `sudo yam install curl`, дабы убедиться, что библиотека curl скачена на виртуальную машину (рис. 4).
+Прописываем команду `sudo yum install curl`, дабы убедиться, что библиотека curl скачена на виртуальную машину (рис. 4).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/045fa605-3f01-44b9-9f08-26e8e95335bc" alt="" width="1000">
