@@ -91,65 +91,86 @@ sudo systemctl enable docker --now
    <p>Рисунок 12 - Команда для версии Docker Compose</p>
 </div>
 
-`git clone https://github.com/skl256/grafana_stack_for_docker.git`
+```bash
+git clone https://github.com/skl256/grafana_stack_for_docker.git
+```
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/24a58d91-62c7-4851-8a04-f8d9a483d512" alt="" width="1000">
    <p>Рисунок 13 - Команда для версии Docker Compose</p>
 </div>
 
-`cd grafana_stack_for_docker`
+```bash
+cd grafana_stack_for_docker
+```
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/9e9d5805-b1a8-4c2d-88e5-4b0cb8d76673" alt="" width="1000">
    <p>Рисунок 14 - Команда для версии Docker Compose</p>
 </div>
 
-`sudo mkdir -p /mnt/common_volume/swarm/grafana/config`
+```bash
+sudo mkdir -p /mnt/common_volume/swarm/grafana/config
+```
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/332b9115-9d8a-4841-a96a-b481c40183c2" alt="" width="1000">
    <p>Рисунок 15 - Команда для версии Docker Compose</p>
 </div>
 
-`sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus-data}`
+```bash
+sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus-data}
+```
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/bc11a335-6e76-43b6-954a-f21eb31ad178" alt="" width="1000">
    <p>Рисунок 16 - Команда для версии Docker Compose</p>
 </div>
 
-`sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}`
+```bash
+sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}
+```
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/b22ecb57-6d29-48eb-924d-fb5be8bf3d4f" alt="" width="1000">
    <p>Рисунок 17 - Команда для версии Docker Compose</p>
 </div>
 
-`touch /mnt/common_volume/grafana/grafana-config/grafana.ini`
+```bash
+touch /mnt/common_volume/grafana/grafana-config/grafana.ini
+```
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/36eb8da9-e657-46f9-8c47-daad881b9dbe" alt="" width="1000">
    <p>Рисунок 18 - Команда для версии Docker Compose</p>
 </div>
 
-`cp config/* /mnt/common_volume/swarm/grafana/config/`
+```bash
+cp config/* /mnt/common_volume/swarm/grafana/config/
+```
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/3f366f71-13de-4622-bb9d-c5f476692988" alt="" width="1000">
    <p>Рисунок 19 - Команда для версии Docker Compose</p>
 </div>
 
-`mv grafana.yaml docker-compose.yaml`
+```bash
+mv grafana.yaml docker-compose.yaml
+```
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/36802099-d178-4d9e-a694-ac65bf31e113" alt="" width="1000">
    <p>Рисунок 20 - Команда для версии Docker Compose</p>
 </div>
 
-`sudo docker compose up -d`
+```bash
+sudo docker compose up -d
+```
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/a6d9dd9c-eab3-4032-9fc9-c5af6e52dffc" alt="" width="1000">
    <p>Рисунок 21 - Команда для версии Docker Compose</p>
 </div>
+
+## Задание 4 ##
+
