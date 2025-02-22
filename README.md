@@ -232,7 +232,7 @@ sudo docker compose ps
    <p>Рисунок 25 - Список контейнеров</p>
 </div>
 
-```
+```bash
 git clone https://github.com/RabanFix/LarinLaba.git
 ```
 
@@ -243,3 +243,6 @@ git clone https://github.com/RabanFix/LarinLaba.git
    <p>Рисунок 26 - Список контейнеров</p>
 </div>
 
+```bash
+pwd
+```
