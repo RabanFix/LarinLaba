@@ -174,3 +174,45 @@ sudo docker compose up -d
 
 ## Задание 4 ##
 
+```bash
+sudo docker compose up -d
+```
+
+- Ключ `-d` переводит автоматически docker compose в фоновый режим.
+
+```bash
+sudo docker compose stop
+```
+
+- Эта команда останавливает все активные контейнеры, связанные с проектом, который описан в файле `docker-compose.yml` (рис. 22).
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/44c86d1b-56af-4e80-99b4-d20b93babf74" alt="" width="1000">
+   <p>Рисунок 22 - Остановка Docker Compose</p>
+</div>
+
+```bash
+sudo docker compose down
+```
+
+Эта команда выполняет следующие действия:
+- Останавливает все активные контейнеры, связанные с проектом.
+- Удаляет контейнеры.
+- Удаляет сети, созданные автоматически для этого проекта.
+- По умолчанию не удаляет объёмы (volumes) и образы (images), если они явно не указаны в параметрах (рис. 23).
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/6596b41c-60da-490f-adfb-e1d88ea8d465" alt="" width="1000">
+   <p>Рисунок 23 - Остановка Docker Compose</p>
+</div>
+
+```bash
+sudo docker compose ps
+```
+
+- Эта команда выводит список контейнеров, которые относятся к текущему проекту, вместе с их состоянием и дополнительной информацией (рис. 24).
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/b8f60e84-2490-4988-8cd2-88079964742b" alt="" width="1000">
+   <p>Рисунок 24 - Список контейнеров</p>
+</div>
