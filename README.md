@@ -231,3 +231,15 @@ sudo docker compose ps
    <img src="https://github.com/user-attachments/assets/b8f60e84-2490-4988-8cd2-88079964742b" alt="" width="1000">
    <p>Рисунок 25 - Список контейнеров</p>
 </div>
+
+```
+git clone https://github.com/RabanFix/LarinLaba.git
+```
+
+- Благодаря этой команде успашно создана папка с наименованием "LarinLaba" (рис. 27).
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/c9ddca58-88aa-4fda-99a5-8eebe392b638" alt="" width="1000">
+   <p>Рисунок 26 - Список контейнеров</p>
+</div>
+
