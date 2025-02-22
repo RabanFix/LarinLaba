@@ -158,6 +158,12 @@ cp config/* /mnt/common_volume/swarm/grafana/config/
 mv grafana.yaml docker-compose.yaml
 ```
 
+- `mv` : Это стандартная Unix-команда для перемещения или переименования файлов и директорий.
+  - Если указать один путь (например, mv file.txt newfile.txt), она переименует файл.
+  - Если указать два разных пути (например, mv file.txt /another/directory/), она переместит файл.
+- `grafana.yaml` : Это исходный файл, который вы хотите переименовать. В данном случае это файл конфигурации Grafana, написанный в формате YAML.
+- `docker-compose.yaml` : Это новое имя файла, которое будет использоваться вместо старого. В данном случае это стандартное имя для файла конфигурации Docker Compose.
+
 <div align="center">
    <img src="https://github.com/user-attachments/assets/36802099-d178-4d9e-a694-ac65bf31e113" alt="" width="1000">
    <p>Рисунок 20 - Команда для версии Docker Compose</p>
@@ -166,10 +172,14 @@ mv grafana.yaml docker-compose.yaml
 ```bash
 sudo docker compose up -d
 ```
+- `sudo` : Это команда для выполнения операции с правами суперпользователя (root), если текущий пользователь не добавлен в группу docker.
+- `docker compose` : Это подкоманда Docker Compose, которая используется для управления мультиконтейнерными приложениями через файл docker-compose.yml.
+- `up` : Эта команда создает и запускает контейнеры, описанные в файле docker-compose.yml. Если контейнеры уже существуют, они просто запускаются.
+- `-d` (detached mode): Этот флаг указывает Docker Compose запускать контейнеры в фоновом режиме, без вывода логов в терминал. Это удобно для длительных задач или продакшн-сценариев.
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/a6d9dd9c-eab3-4032-9fc9-c5af6e52dffc" alt="" width="1000">
-   <p>Рисунок 21 - Команда для версии Docker Compose</p>
+   <p>Рисунок 21 - Команда для поднятия Docker Compose</p>
 </div>
 
 ## Задание 4 ##
@@ -178,7 +188,7 @@ sudo docker compose up -d
 sudo docker compose up -d
 ```
 
-- Ключ `-d` переводит автоматически docker compose в фоновый режим.
+- Данная команда с ключом `-d` переводит автоматически docker compose в фоновый режим.
 
 ```bash
 sudo docker compose stop
