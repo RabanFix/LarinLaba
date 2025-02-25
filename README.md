@@ -57,7 +57,6 @@ wget --version
 
 ## Задание 2 ##
 
-Прописываем команду:
 ```bash
 sudo yum install curl
 ```
