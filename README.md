@@ -363,13 +363,15 @@ sudo docker compose ps
 git clone https://github.com/RabanFix/LarinLaba.git
 ```
 
-- Благодаря этой команде успашно создана папка с наименованием "LarinLaba" (рис. 27).
+- Благодаря этой команде успашно создана папка с наименованием "LarinLaba" (рис. 26).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/c9ddca58-88aa-4fda-99a5-8eebe392b638" alt="" width="1000">
-   <p>Рисунок 26 - Список контейнеров</p>
+   <p>Рисунок 26 - Папка LarinLaba </p>
 </div>
 
 ```bash
 pwd
 ```
+
+- Команда `pwd` (от p rint w orking d irectory) используется для вывода текущей рабочей директории (путь к той папке, в которой вы находитесь в данный момент в терминале).
