@@ -112,35 +112,75 @@ sudo systemctl enable docker --now
 
 ## Задание 3 ##
 
-Команда `COMVER=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)` получает последнюю версию Docker Compose, для этого использует API GitHub для получения информации о последнем релизе и вытаскивает номер версии из JSON ответа (рис. 8).
+```bash
+COMVER=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)
+```
+- `COMVER=$( ... )` : Это команда для присвоения значения переменной COMVER. Результат выполнения команды внутри $() будет сохранён в переменную COMVER
+- `curl -s https://api.github.com/repos/docker/compose/releases/latest` :
+   - `curl` : Утилита для выполнения HTTP-запросов.
+   - `-s` : Флаг, который подавляет вывод прогресса и предупреждений (silent mode).
+   - `https://api.github.com/repos/docker/compose/releases/latest` : URL API GitHub, который возвращает информацию о последнем релизе проекта Docker Compose. Ответ представляет собой JSON-объект с информацией о версии, дате выпуска, ссылках на скачивание и т.д. (рис. 8).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/df033843-1cd4-4f08-991a-33e5f0b1b8d6" alt="" width="1000">
    <p>Рисунок 8 - Команда для версии Docker Compose</p>
 </div>
 
-Команда `sudo curl -L "https://github.com/docker/compose/releases/download/$COMVER/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose` скачивает Docker Compose соответствующий системе, $(uname -s) - операционная система, $(uname -m) - архитектура процессора и сохраняет в /usr/bin/docker-compose (рис. 9).
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/$COMVER/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+```
+
+- `curl -L` :
+   - `curl` : Утилита для выполнения HTTP-запросов.
+   - `-L` : Флаг, который указывает curl следовать перенаправлениям (редиректам). Это важно, потому что GitHub может перенаправить запрос на фактическое местоположение файла.
+- `"https://github.com/docker/compose/releases/download/$COMVER/docker-compose-$(uname -s)-$(uname -m)"` : Это URL для скачивания Docker Compose.
+- `-o /usr/bin/docker-compose` :
+   - `-o` : Указывает, куда сохранить скачанный файл.
+   - `/usr/bin/docker-compose` : Путь, куда будет сохранён исполняемый файл Docker Compose. Каталог `/usr/bin/` является стандартным местом для глобальных исполняемых файлов.
+
+Разбираем URL:
+
+- `https://github.com/docker/compose/releases/download/` : Базовый URL для загрузки релизов Docker Compose с GitHub.
+- `$COMVER` : Переменная, содержащая версию Docker Compose. Например, если $COMVER=v2.17.2, то URL будет содержать /v2.17.2/.
+- `docker-compose-$(uname -s)-$(uname -m)` :
+   - `$(uname -s)` : Возвращает название операционной системы (например, Linux).
+   - `$(uname -m)` : Возвращает архитектуру процессора (например, x86_64 или arm64).(рис. 9).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/d9662de7-b656-40d7-bbaa-bb6c3980c41f" alt="" width="1000">
    <p>Рисунок 9 - Docker Compose</p>
 </div>
 
-`sudo chmod +x /usr/bin/docker-compose`
+```bash
+sudo chmod +x /usr/bin/docker-compose
+```
+
+- `chmod` : Это команда для изменения прав доступа к файлам и директориям. Права доступа определяют, кто может читать, записывать или выполнять файл.
+- `+x` : Флаг `+x` добавляет право на выполнение (execute) для всех пользователей (владельца, группы и других). После применения этого флага файл становится исполняемым, то есть его можно запускать как программу или скрипт.
+- `/usr/bin/docker-compose` : Это путь к файлу `docker-compose` , который был ранее загружен (например, с помощью команды curl) и сохранён в системную директорию /usr/bin/. Каталог `/usr/bin/` является стандартным местом для хранения глобальных исполняемых файлов в Linux (рис. 10).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/847a641d-6d1d-43ae-8657-5deba3a92b9f" alt="" width="1000">
    <p>Рисунок 10 - Команда для версии Docker Compose</p>
 </div>
 
-`docker-compose --version`
+```bash
+docker-compose --version
+```
+
+- `docker-compose` : Это основная команда для управления контейнерами с помощью Docker Compose. Docker Compose позволяет определять и запускать многоступенчатые приложения Docker с несколькими контейнерами через файл конфигурации (обычно docker-compose.yml).
+- `--version` : Подкоманда, которая запрашивает информацию о версии Docker Compose. Выводит номер версии, чтобы пользователь мог убедиться, что установлена нужная версия (рис. 11).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/2422febb-bd3e-4581-ab55-254c0c4612c9" alt="" width="1000">
    <p>Рисунок 11 - Команда для версии Docker Compose</p>
 </div>
 
-Скачиваем git командой `sudo yum install git` (рис. 12).
+```bash
+sudo yum install git
+```
+
+ - Данная команда устанавливает пакет git (рис. 12).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/2c4e5670-ea50-4c5d-b777-38df02eb6e0d" alt="" width="1000">
@@ -151,6 +191,9 @@ sudo systemctl enable docker --now
 git clone https://github.com/skl256/grafana_stack_for_docker.git
 ```
 
+- `git clone` : Подкоманда Git, которая создает локальную копию удаленного репозитория. После выполнения этой команды Git скачивает весь проект, включая его историю коммитов, ветки и теги.
+- `https://github.com/skl256/grafana_stack_for_docker.git` : URL-адрес удаленного репозитория на GitHub. Этот адрес указывает на репозиторий под названием grafana_stack_for_docker (рис. 13).
+
 <div align="center">
    <img src="https://github.com/user-attachments/assets/24a58d91-62c7-4851-8a04-f8d9a483d512" alt="" width="1000">
    <p>Рисунок 13 - Команда для версии Docker Compose</p>
@@ -160,6 +203,8 @@ git clone https://github.com/skl256/grafana_stack_for_docker.git
 cd grafana_stack_for_docker
 ```
 
+- Данная команда переводит нас на директорию `grafana_stack_for_docker` (рис. 14).
+
 <div align="center">
    <img src="https://github.com/user-attachments/assets/9e9d5805-b1a8-4c2d-88e5-4b0cb8d76673" alt="" width="1000">
    <p>Рисунок 14 - Команда для версии Docker Compose</p>
@@ -168,6 +213,17 @@ cd grafana_stack_for_docker
 ```bash
 sudo mkdir -p /mnt/common_volume/swarm/grafana/config
 ```
+
+- `mkdir` : Это команда для создания новых директорий (папок) в Linux.
+- `-p` : Флаг -p (от "parents") означает, что команда создаст не только указанную директорию, но и все необходимые родительские директории, если они ещё не существуют. Например, если путь `/mnt/common_volume/swarm/grafana/` не существует, команда автоматически создаст его целиком.
+- `/mnt/common_volume/swarm/grafana/config` : Полный путь к новой директории, которую нужно создать.
+- 
+Структура:
+- `/mnt`: Обычно используется для монтирования внешних устройств или общих каталогов.
+- `/common_volume`: Предположительно это общий том, который может быть доступен для нескольких сервисов или пользователей.
+- `/swarm`: Возможно, связано с Docker Swarm — инструментом для управления кластерами контейнеров Docker.
+- `/grafana`: Каталог, связанный с Grafana — платформой для создания дашбордов и визуализации данных.
+- `/config`: Поддиректория для хранения конфигурационных файлов Grafana (рис. 15).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/332b9115-9d8a-4841-a96a-b481c40183c2" alt="" width="1000">
