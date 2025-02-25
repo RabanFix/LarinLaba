@@ -216,14 +216,7 @@ sudo mkdir -p /mnt/common_volume/swarm/grafana/config
 
 - `mkdir` : Это команда для создания новых директорий (папок) в Linux.
 - `-p` : Флаг -p (от "parents") означает, что команда создаст не только указанную директорию, но и все необходимые родительские директории, если они ещё не существуют. Например, если путь `/mnt/common_volume/swarm/grafana/` не существует, команда автоматически создаст его целиком.
-- `/mnt/common_volume/swarm/grafana/config` : Полный путь к новой директории, которую нужно создать.
-- 
-Структура:
-- `/mnt`: Обычно используется для монтирования внешних устройств или общих каталогов.
-- `/common_volume`: Предположительно это общий том, который может быть доступен для нескольких сервисов или пользователей.
-- `/swarm`: Возможно, связано с Docker Swarm — инструментом для управления кластерами контейнеров Docker.
-- `/grafana`: Каталог, связанный с Grafana — платформой для создания дашбордов и визуализации данных.
-- `/config`: Поддиректория для хранения конфигурационных файлов Grafana (рис. 15).
+- `/mnt/common_volume/swarm/grafana/config` : Полный путь к новой директории, которую нужно создать (рис. 15).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/332b9115-9d8a-4841-a96a-b481c40183c2" alt="" width="1000">
@@ -234,6 +227,14 @@ sudo mkdir -p /mnt/common_volume/swarm/grafana/config
 sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus-data}
 ```
 
+- `/mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus-data}` : Это использование brace expansion — механизма оболочки bash для генерации списка значений из фигурных скобок. `{grafana-config,grafana-data,prometheus-data}` раскрывается в три отдельные строки: grafana-config, grafana-data и prometheus-data.
+
+Зачем это нужно?
+Эта команда часто используется при настройке среды для работы с Docker, Grafana и Prometheus. Вот примеры использования каждой из создаваемых директорий:
+- `grafana-config` : Используется для хранения конфигурационных файлов Grafana, например, grafana.ini или файлов дашбордов.
+- `grafana-data` :Используется для хранения данных Grafana, таких как база данных SQLite (по умолчанию) и сохранённые дашборды.
+- `prometheus-data` : Используется для хранения данных Prometheus, таких как временные ряды метрик (рис. 16).
+
 <div align="center">
    <img src="https://github.com/user-attachments/assets/bc11a335-6e76-43b6-954a-f21eb31ad178" alt="" width="1000">
    <p>Рисунок 16 - Команда для версии Docker Compose</p>
@@ -242,6 +243,12 @@ sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus
 ```bash
 sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}
 ```
+
+- `chown` : Это команда для изменения владельца и/или группы файла или директории.
+- `-R` : Флаг `-R` (от "recursive") означает, что изменения будут применены рекурсивно ко всем файлам и поддиректориям внутри указанной директории.
+- `$(id -u):$(id -g)` : Это выражение определяет нового владельца и группу для файлов.
+- `{/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}` : Это использование brace expansion (расширения фигурных скобок) для одновременного указания нескольких путей. `{path1,path2}` раскрывается в два отдельных пути: `/mnt/common_volume/swarm/grafana/config` и `/mnt/common_volume/grafana` (рис. 17).
+
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/b22ecb57-6d29-48eb-924d-fb5be8bf3d4f" alt="" width="1000">
@@ -252,6 +259,11 @@ sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/co
 touch /mnt/common_volume/grafana/grafana-config/grafana.ini
 ```
 
+- `touch` : Это команда для создания новых файлов или обновления метки времени существующих файлов.
+   - Если файл не существует, touch создаст его пустым.
+   - Если файл уже существует, touch просто обновит дату последнего доступа и изменения (timestamp).
+- `/mnt/common_volume/grafana/grafana-config/grafana.ini` : Полный путь к файлу, который нужно создать или обновить. В данном случае это файл конфигурации Grafana `(grafana.ini)`, расположенный в директории `/mnt/common_volume/grafana/grafana-config/` (рис. 18).
+
 <div align="center">
    <img src="https://github.com/user-attachments/assets/36eb8da9-e657-46f9-8c47-daad881b9dbe" alt="" width="1000">
    <p>Рисунок 18 - Команда для версии Docker Compose</p>
@@ -260,6 +272,10 @@ touch /mnt/common_volume/grafana/grafana-config/grafana.ini
 ```bash
 cp config/* /mnt/common_volume/swarm/grafana/config/
 ```
+
+- `cp` : Это команда для копирования файлов и директорий в Linux.
+- `config/*` : Указывает на все файлы (но не поддиректории) внутри директории config. Звёздочка (*) — это шаблон, который означает "все файлы" в указанной директории. Если директория config содержит файлы `file1.txt`, `file2.conf` и `file3.log` и т.п., то этот шаблон будет соответствовать всем этим файлам.
+- `/mnt/common_volume/swarm/grafana/config/` : Это целевая директория, куда будут скопированы файлы из `config` (рис. 19).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/3f366f71-13de-4622-bb9d-c5f476692988" alt="" width="1000">
