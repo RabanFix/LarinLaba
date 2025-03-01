@@ -1,5 +1,5 @@
 # Лабораторная работа
-## Задание 1 ##
+## Задание 1
 
 ```bash
 sudo yum install wget
@@ -55,7 +55,8 @@ wget --version
    <p>Рисунок 3 - wget</p>
 </div>
 
-## Задание 2 ##
+---
+## Задание 2
 
 ```bash
 sudo yum install curl
@@ -109,7 +110,8 @@ sudo systemctl enable docker --now
    <p>Рисунок 7 - Авто-запуск docker</p>
 </div>
 
-## Задание 3 ##
+---
+## Задание 3
 
 ```bash
 COMVER=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)
@@ -309,7 +311,8 @@ sudo docker compose up -d
    <p>Рисунок 21 - Команда для поднятия Docker Compose</p>
 </div>
 
-## Задание 4 ##
+---
+## Задание 4
 
 ```bash
 sudo docker compose up -d
@@ -380,3 +383,6 @@ pwd
    <img src="https://github.com/user-attachments/assets/36fd569f-2650-4f07-bf8a-f0512c57f00a" alt="" width="1000">
    <p>Рисунок 26 - Папка LarinLaba </p>
 </div>
+
+---
+## Задание 5
