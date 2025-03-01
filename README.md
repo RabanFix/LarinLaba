@@ -404,5 +404,5 @@ sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/bc86a5b5-d648-41d0-80fe-379f12486ecd" alt="" width="1000">
-   <p>Рисунок 28 - Перенос файла прометеуса </p>
+   <p>Рисунок 29 - Правильное название файла </p>
 </div>
