@@ -391,7 +391,7 @@ pwd
 sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
 ```
 
--
+- Команда переносит файл `prometeus.yaml` в папку по пути `/mnt/common_volume/swarm/grafana/config/`. 
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/b326d956-5c3b-4809-b8cb-cb4c07b5f42d" alt="" width="1000">
