@@ -377,12 +377,23 @@ git clone https://github.com/RabanFix/LarinLaba.git
 pwd
 ```
 
-- Команда `pwd` (от p rint w orking d irectory) используется для вывода текущей рабочей директории (путь к той папке, в которой вы находитесь в данный момент в терминале).
+- Команда `pwd` (от p rint w orking d irectory) используется для вывода текущей рабочей директории (путь к той папке, в которой вы находитесь в данный момент в терминале) (рис. 27).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/36fd569f-2650-4f07-bf8a-f0512c57f00a" alt="" width="1000">
-   <p>Рисунок 26 - Папка LarinLaba </p>
+   <p>Рисунок 27 - Полный путь </p>
 </div>
 
 ---
 ## Задание 5
+
+```bash
+sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
+```
+
+-
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/b326d956-5c3b-4809-b8cb-cb4c07b5f42d" alt="" width="1000">
+   <p>Рисунок 28 - Перенос файла прометеуса </p>
+</div>
