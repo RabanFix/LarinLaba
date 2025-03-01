@@ -408,7 +408,7 @@ sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
 </div>
 
 
-После поднятие докера компоса, я зашёл в grafana по адресу: `localhost:3000` (рис. 30).
+После поднятие докера компоса, я зашёл в grafana по адресу: `localhost:3000` (рис. 30). (1860), (импорт) и т.п.
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/59c1b5c4-fe59-453c-af76-1ede7d864138" alt="" width="1000">
