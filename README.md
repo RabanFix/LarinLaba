@@ -399,3 +399,10 @@ sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
    <img src="https://github.com/user-attachments/assets/b326d956-5c3b-4809-b8cb-cb4c07b5f42d" alt="" width="1000">
    <p>Рисунок 28 - Перенос файла прометеуса </p>
 </div>
+
+`prometeus.yaml` - данный файл был переименован в `prometheus.yaml`. Создал бэкап старого файла `prometheus(copy).yaml` (рис. 29).
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/bc86a5b5-d648-41d0-80fe-379f12486ecd" alt="" width="1000">
+   <p>Рисунок 28 - Перенос файла прометеуса </p>
+</div>
