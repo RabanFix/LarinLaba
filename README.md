@@ -387,6 +387,8 @@ pwd
 ---
 ## Задание 5
 
+!! Сделать бэкапы прометеуса и докера компоса
+
 ```bash
 sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
 ```
