@@ -281,7 +281,7 @@ cp config/* /mnt/common_volume/swarm/grafana/config/
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/3f366f71-13de-4622-bb9d-c5f476692988" alt="" width="1000">
-   <p>Рисунок 19 - Команда для версии Docker Compose</p>
+   <p>Рисунок 19 - Копирование файлов/данных</p>
 </div>
 
 ```bash
@@ -296,12 +296,13 @@ mv grafana.yaml docker-compose.yaml
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/36802099-d178-4d9e-a694-ac65bf31e113" alt="" width="1000">
-   <p>Рисунок 20 - Команда для версии Docker Compose</p>
+   <p>Рисунок 20 - Переименовывание</p>
 </div>
 
 ```bash
 sudo docker compose up -d
 ```
+
 - `sudo` : Это команда для выполнения операции с правами суперпользователя (root), если текущий пользователь не добавлен в группу docker.
 - `docker compose` : Это подкоманда Docker Compose, которая используется для управления мультиконтейнерными приложениями через файл docker-compose.yml.
 - `up` : Эта команда создает и запускает контейнеры, описанные в файле docker-compose.yml. Если контейнеры уже существуют, они просто запускаются.
