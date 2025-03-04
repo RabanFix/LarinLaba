@@ -239,7 +239,7 @@ sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/bc11a335-6e76-43b6-954a-f21eb31ad178" alt="" width="1000">
-   <p>Рисунок 16 - Команда для версии Docker Compose</p>
+   <p>Рисунок 16 - Создание ещё 3 директорий</p>
 </div>
 
 ```bash
@@ -254,7 +254,7 @@ sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/co
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/b22ecb57-6d29-48eb-924d-fb5be8bf3d4f" alt="" width="1000">
-   <p>Рисунок 17 - Команда для версии Docker Compose</p>
+   <p>Рисунок 17 - Группа директорий</p>
 </div>
 
 ```bash
@@ -268,7 +268,7 @@ touch /mnt/common_volume/grafana/grafana-config/grafana.ini
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/36eb8da9-e657-46f9-8c47-daad881b9dbe" alt="" width="1000">
-   <p>Рисунок 18 - Команда для версии Docker Compose</p>
+   <p>Рисунок 18 - Файл grafana.ini</p>
 </div>
 
 ```bash
