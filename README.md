@@ -22,7 +22,7 @@ su
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/c363c8b5-4aee-4d9b-a664-0fcc9f36602e" alt="" width="500">
-   <p>Рисунок1 - Супер пользователь</p>
+   <p>Рисунок 1 - Супер пользователь</p>
 </div>
 
 После же прописываем команду: 
@@ -116,6 +116,7 @@ sudo systemctl enable docker --now
 ```bash
 COMVER=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)
 ```
+
 - `COMVER=$( ... )` : Это команда для присвоения значения переменной COMVER. Результат выполнения команды внутри $() будет сохранён в переменную COMVER
 - `curl -s https://api.github.com/repos/docker/compose/releases/latest` :
    - `curl` : Утилита для выполнения HTTP-запросов.
@@ -145,7 +146,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/$COMVER/docker
 - `$COMVER` : Переменная, содержащая версию Docker Compose. Например, если $COMVER=v2.17.2, то URL будет содержать /v2.17.2/.
 - `docker-compose-$(uname -s)-$(uname -m)` :
    - `$(uname -s)` : Возвращает название операционной системы (например, Linux).
-   - `$(uname -m)` : Возвращает архитектуру процессора (например, x86_64 или arm64).(рис. 9).
+   - `$(uname -m)` : Возвращает архитектуру процессора (например, x86_64 или arm64) (рис. 9).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/d9662de7-b656-40d7-bbaa-bb6c3980c41f" alt="" width="1000">
@@ -162,7 +163,7 @@ sudo chmod +x /usr/bin/docker-compose
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/847a641d-6d1d-43ae-8657-5deba3a92b9f" alt="" width="1000">
-   <p>Рисунок 10 - Команда для версии Docker Compose</p>
+   <p>Рисунок 10 - Команда для Docker Compose</p>
 </div>
 
 ```bash
@@ -185,7 +186,7 @@ sudo yum install git
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/2c4e5670-ea50-4c5d-b777-38df02eb6e0d" alt="" width="1000">
-   <p>Рисунок 12 - Команда для версии Docker Compose</p>
+   <p>Рисунок 12 - Установка git</p>
 </div>
 
 ```bash
@@ -197,7 +198,7 @@ git clone https://github.com/skl256/grafana_stack_for_docker.git
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/24a58d91-62c7-4851-8a04-f8d9a483d512" alt="" width="1000">
-   <p>Рисунок 13 - Команда для версии Docker Compose</p>
+   <p>Рисунок 13 - Клонирование директории</p>
 </div>
 
 ```bash
@@ -208,7 +209,7 @@ cd grafana_stack_for_docker
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/9e9d5805-b1a8-4c2d-88e5-4b0cb8d76673" alt="" width="1000">
-   <p>Рисунок 14 - Команда для версии Docker Compose</p>
+   <p>Рисунок 14 - Переход в директорию</p>
 </div>
 
 ```bash
@@ -221,7 +222,7 @@ sudo mkdir -p /mnt/common_volume/swarm/grafana/config
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/332b9115-9d8a-4841-a96a-b481c40183c2" alt="" width="1000">
-   <p>Рисунок 15 - Команда для версии Docker Compose</p>
+   <p>Рисунок 15 - Создание новых директорий</p>
 </div>
 
 ```bash
