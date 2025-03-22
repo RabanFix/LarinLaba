@@ -440,3 +440,30 @@ Cоздав `Dashboards` импортируем его:
    <img src="https://github.com/user-attachments/assets/59c1b5c4-fe59-453c-af76-1ede7d864138](https://github.com/user-attachments/assets/ea3af1d2-3ca8-4645-92db-3a061ed29b4f" alt="" width="1000">
    <p>Рисунок 30 - Результат</p>
 </div>
+
+---
+## Задание 6
+
+![image](https://github.com/user-attachments/assets/8da0f925-7961-4f33-b9e0-37b1fb6fa669)
+
+![image](https://github.com/user-attachments/assets/10d4a388-cebd-4075-a7a3-1ee7960eefe9)
+
+![image](https://github.com/user-attachments/assets/b8ff78da-f558-4d15-82fc-9cbf644181ae)
+
+![image](https://github.com/user-attachments/assets/923e2a9f-6397-4c2f-9613-1a5dc2f8ce9f)
+
+![image](https://github.com/user-attachments/assets/deec106e-8109-46ea-8974-c0c90728948a)
+
+
+
+```
+echo -e "# TYPE light_metric1 gauge\nlight_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
+```
+
+```
+http://localhost:8428/api/v1/query
+```
+
+```
+http://localhost:8428 - vmui
+```
