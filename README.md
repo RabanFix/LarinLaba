@@ -420,5 +420,26 @@ sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
    <p>Рисунок 29 - Grafana</p>
 </div>
 
-![image](https://github.com/user-attachments/assets/ea3af1d2-3ca8-4645-92db-3a061ed29b4f)
+После того как зашли, нужно создать `Dashboards`.
+Путь где его можно создать `Home -> Connections -> Data sources -> Add data source`
 
+
+Где нужно нажать на `+Add visualization` -> `Configure a new data source` -> `Prometheus`
+
+
+- Настройки:
+  - Connection: `http://prometheus:9090`
+  - Authentication: `Basic authentication`
+
+После того как все настроили нажимаем `Save & test`
+
+Cоздав `Dashboards` импортируем его: 
+Путь где его можно импортировать `Home -> Dashboards -> Import dashboard`
+
+В поле нужно написать `1860` -> `Load` (рис. 30).
+`Select Prometheus` -> `Import` -> `Название Prometheus`
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/59c1b5c4-fe59-453c-af76-1ede7d864138](https://github.com/user-attachments/assets/ea3af1d2-3ca8-4645-92db-3a061ed29b4f" alt="" width="1000">
+   <p>Рисунок 30 - Результат</p>
+</div>
