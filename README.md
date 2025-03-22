@@ -434,10 +434,7 @@ sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
 После того как все настроили нажимаем `Save & test`
 
 Cоздав `Dashboards` импортируем его: 
-Путь где его можно импортировать `Home -> Dashboards -> Import dashboard`
-
-В поле нужно написать `1860` -> `Load` (рис. 30).
-`Select Prometheus` -> `Import` -> `Название Prometheus`
+Путь где его можно импортировать `Home -> Dashboards -> Import dashboard` (рис. 30).
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/59c1b5c4-fe59-453c-af76-1ede7d864138](https://github.com/user-attachments/assets/ea3af1d2-3ca8-4645-92db-3a061ed29b4f" alt="" width="1000">
