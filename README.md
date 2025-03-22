@@ -420,3 +420,5 @@ sudo mv prometeus.yaml /mnt/common_volume/swarm/grafana/config/
    <p>Рисунок 29 - Grafana</p>
 </div>
 
+![image](https://github.com/user-attachments/assets/ea3af1d2-3ca8-4645-92db-3a061ed29b4f)
+
