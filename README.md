@@ -444,7 +444,7 @@ Cоздав `Dashboards` импортируем его:
 ---
 ## Задание 6
 
-Создал новую data source с новым значением `http//:victoriametrics:8428` (рис. 31)
+Создал новую data source с новым значением `http://victoriametrics:8428` (рис. 31)
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/4f56a724-7531-48bf-858c-ff43a6b4980e" alt="" width="1000">
