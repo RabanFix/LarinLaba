@@ -444,26 +444,75 @@ Cоздав `Dashboards` импортируем его:
 ---
 ## Задание 6
 
-![image](https://github.com/user-attachments/assets/8da0f925-7961-4f33-b9e0-37b1fb6fa669)
+Создал новую data source с новым значением `http//:victoriametrics:8428` (рис. 31)
 
-![image](https://github.com/user-attachments/assets/10d4a388-cebd-4075-a7a3-1ee7960eefe9)
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/4f56a724-7531-48bf-858c-ff43a6b4980e" alt="" width="1000">
+   <p>Рисунок 31 - Data Source</p>
+</div>
 
-![image](https://github.com/user-attachments/assets/b8ff78da-f558-4d15-82fc-9cbf644181ae)
-
-![image](https://github.com/user-attachments/assets/923e2a9f-6397-4c2f-9613-1a5dc2f8ce9f)
-
-![image](https://github.com/user-attachments/assets/deec106e-8109-46ea-8974-c0c90728948a)
-
-
+Прописал команду, после чего создал новый Dashboard с новой data source (рис. 32):
 
 ```
 echo -e "# TYPE light_metric1 gauge\nlight_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
 ```
 
+Эта команда отправляет метрику `light_metric1` со значением `0` в Prometheus-совместимую систему мониторинга (VictoriaMetrics) через HTTP API.
+
+1. `echo -e`:
+   - Генерирует текстовые данные в формате Prometheus exposition format.
+   - `-e` позволяет интерпретировать спецсимволы, такие как `\n` (перенос строки).
+
+2. `|`:
+   - Передает вывод команды `echo` в следующую команду (`curl`).
+
+3. `curl --data-binary @-`:
+   - Отправляет данные из стандартного ввода (`@-`) в указанный URL.
+   - `--data-binary` сохраняет форматирование данных (включая переносы строк).
+
+4. URL `http://localhost:8428/api/v1/import/prometheus`:
+   - Это endpoint для импорта метрик в формате Prometheus.
+   - Предполагается, что на `localhost:8428` работает сервер мониторинга (например, VictoriaMetrics).
+
+Итог:
+Команда создает метрику `light_metric1` типа `gauge` со значением `0` и отправляет её в систему мониторинга.
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/8da0f925-7961-4f33-b9e0-37b1fb6fa669" alt="" width="1000">
+   <p>Рисунок 32 - Dashboard</p>
+</div>
+
+После прописал следующие команды, дабы получить новые результаты в Dashboard: (рис. 33).
+
 ```
-http://localhost:8428/api/v1/query
+echo -e "# TYPE light_metric1 gauge\nlight_metric1 180" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
 ```
 
 ```
-http://localhost:8428 - vmui
+echo -e "# TYPE light_metric1 gauge\nlight_metric1 90" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
 ```
+
+```
+echo -e "# TYPE light_metric1 gauge\nlight_metric1 135" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
+```
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/10d4a388-cebd-4075-a7a3-1ee7960eefe9" alt="" width="1000">
+</div>
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/b8ff78da-f558-4d15-82fc-9cbf644181ae" alt="" width="1000">
+   <p>Рисунок 33 - Dashboard</p>
+</div>
+
+Cправа сверху в поисковой строчке вписал Connect `null values`, и выбрал `always`. Она соедит наши значение. И сохранил результат графика (рис. 34).
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/923e2a9f-6397-4c2f-9613-1a5dc2f8ce9f" alt="" width="1000">
+</div>
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/deec106e-8109-46ea-8974-c0c90728948a" alt="" width="1000">
+   <p>Рисунок 34 - Готовый график</p>
+</div>
+
