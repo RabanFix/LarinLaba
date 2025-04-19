@@ -1,4 +1,4 @@
-## Задание 7
+![image](https://github.com/user-attachments/assets/3c504660-36c5-4efe-a5b7-d0556676ad69)## Задание 7
 
 Скачал вторую ВМ (назвал никнейм пользователя: rabanfix), установил гостевые дополнения и `wget`, `curl` и `git` (рис. 1).
 
@@ -71,6 +71,38 @@ sudo sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/c8851d4d-050e-45fd-ad7f-735ee190d037" alt="" width="1000">
-   <p>Рисунок 5 - getenforce</p>
+   <p>Рисунок 6 - getenforce</p>
+</div>
+
+Скачал Prometheus. 3.3.0 / 2025-04-15 версией командой (рис. 7):
+
+```
+wget https://github.com/prometheus/prometheus/releases/download/v3.3.0/prometheus-3.3.0.linux-amd64.tar.gz
+```
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/39637682-fd90-4195-b24d-51bba1fe2a67" alt="" width="1000">
+   <p>Рисунок 7 - Prometheus. 3.3.0</p>
+</div>
+
+Создал директории для Prometheus (рис. 8) командой `sudo mkdir -p /etc/prometheus /var/lib/prometheus`.
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/61a7f017-64f8-4bee-b1a2-b9431211cdee" alt="" width="1000">
+   <p>Рисунок 8 - Директории</p>
+</div>
+
+Разархивировал файл командой `tar -zxf prometheus-*.linux-amd64.tar.gz` и перешёл в папку prometheus-*.linux-amd64 командой `cd prometheus-*.linux-amd64` (рис. 9).
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/b95a0d5d-2238-439b-a8dd-a989281700d9" alt="" width="1000">
+   <p>Рисунок 9 - Файл</p>
+</div>
+
+Выполнил команду `pwd` для проверки корректности папки (рис. 10).
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/b6a6e084-867c-4ca3-acab-a07ffec783be" alt="" width="1000">
+   <p>Рисунок 10 - Полный путь</p>
 </div>
 
