@@ -106,3 +106,35 @@ wget https://github.com/prometheus/prometheus/releases/download/v3.3.0/prometheu
    <p>Рисунок 10 - Полный путь</p>
 </div>
 
+Скопировал файлы Prometheus в системные директории (рис. 11):
+
+```
+sudo cp prometheus promtool /usr/local/bin/
+```
+
+```
+sudo cp prometheus.yml /etc/prometheus/
+```
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/dfa382c9-b803-46e4-a51f-6f81171359fb" alt="" width="1000">
+   <p>Рисунок 11 - Файлы</p>
+</div>
+
+Очистка временных файлов командой и повторная команда `pwd` (рис. 12):
+
+```
+cd .. && rm -rf prometheus-*.linux-amd64/ && rm -f prometheus-*.linux-amd64.tar.gz
+```
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/22abbeab-4ede-48f5-9335-92a6090d13f1" alt="" width="1000">
+   <p>Рисунок 12 - Очистка временных файлов</p>
+</div>
+
+Проверка содержимого директории (рис. 13) командой `ls -l`.
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/64de6c22-9de9-449c-9b3b-4b0cdda5cccc" alt="" width="1000">
+   <p>Рисунок 13 - Очистка временных файлов</p>
+</div>
