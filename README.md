@@ -516,7 +516,6 @@ Cправа сверху в поисковой строчке вписал Conne
    <p>Рисунок 34 - Готовый график</p>
 </div>
 
-
 ## Задание 7
 
 Скачал вторую ВМ (назвал никнейм пользователя: rabanfix), установил гостевые дополнения и `wget`, `curl` и `git` (рис. 1).
@@ -556,7 +555,7 @@ sudo yum install chrony
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/76590126-9525-41cf-80ec-8e4c4756e2d9" alt="" width="1000">
-   <p>Рисунок 4 - tar</p>
+   <p>Рисунок 4 - chrony</p>
 </div>
 
 Написал команды (рис. 5):
@@ -575,6 +574,21 @@ systemctl start chronyd
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/6f91bec2-31be-406a-a936-6d2b6c8ef3e0" alt="" width="1000">
-   <p>Рисунок 5 - tar</p>
+   <p>Рисунок 5 - Команды для включения и запуска</p>
+</div>
+
+При вводе команды `getenforce` получил ответ: `Enforcing`. Поэтому пришлось использовать следующие команды для отключения гетинфорс (рис. 6):
+
+```
+sudo setenforce 0
+```
+
+```
+sudo sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
+```
+
+<div align="center">
+   <img src="https://github.com/user-attachments/assets/c8851d4d-050e-45fd-ad7f-735ee190d037" alt="" width="1000">
+   <p>Рисунок 5 - getenforce</p>
 </div>
 
